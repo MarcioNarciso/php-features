@@ -1,5 +1,7 @@
 # Principais Recursos do PHP 7.0
 
+[&larr; Voltar](index.md)
+
 **Índice**
 - [Declarações de Tipos Escalares](#item-1)
 - [Declarações de Tipos de Retorno](#item-2)

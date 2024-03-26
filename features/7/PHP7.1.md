@@ -1,5 +1,7 @@
 # Principais Recursos do PHP 7.1
 
+[&larr; Voltar](index.md)
+
 **Índice**
 - [Tipos Anuláveis](#item-1)
 - [Funções "void"](#item-2)

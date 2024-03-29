@@ -1,4 +1,4 @@
-# Principais Recursos do PHP 7.0
+# Principais Recursos do PHP 7
 
 [&larr; Voltar](index.md)
 

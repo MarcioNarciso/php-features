@@ -1,4 +1,5 @@
 # Principais Recursos do PHP 7.4
+<a id="topo"></a>
 
 [&larr; Voltar](index.md)
 
@@ -25,6 +26,8 @@
 <a id="item-1"></a>
 
 ## - Propriedades Tipadas
+[Topo &uarr;](#topo)
+
 As propriedades de classe agora suportam declarações de tipo.
 
 Este exemplo reforçará que "$user->id" pode ser atribuído apenas com valores 
@@ -44,6 +47,8 @@ class User {
 <a id="item-2"></a>
 
 ## - Arrow functions
+[Topo &uarr;](#topo)
+
 As "arrow functions" fornecem uma sintaxe abreviada para definir funções com 
 ligação implícita por valor de escopo.
 
@@ -60,6 +65,8 @@ $nums = array_map(fn($n) => $n * $factor, [1, 2, 3, 4]);
 <a id="item-3"></a>
 
 ## - Covariância do tipo de retorno limitado e contravariância do tipo de argumento
+[Topo &uarr;](#topo)
+
 O suporte completo à variação só está disponível se o carregamento automático for 
 usado. 
 
@@ -86,6 +93,8 @@ class ChildProducer extends Producer {
 <a id="item-4"></a>
 
 ## - Operador de Atribuição de Coalescência Nula (??=)
+[Topo &uarr;](#topo)
+
 
 ### Exemplo
 ```php
@@ -103,6 +112,8 @@ if (!isset($array['key'])) {
 <a id="item-5"></a>
 
 ## - Descompactamento Dentro de Arrays (operador "spread")
+[Topo &uarr;](#topo)
+
 
 ### Exemplo
 ```php
@@ -117,6 +128,8 @@ $fruits = ['banana', 'orange', ...$parts, 'watermelon']; // ['banana', 'orange',
 <a id="item-6"></a>
 
 ## - Separador Literal Numérico
+[Topo &uarr;](#topo)
+
 Literais numéricos podem conter underscores entre dígitos.
 
 ### Exemplo
@@ -134,6 +147,8 @@ Literais numéricos podem conter underscores entre dígitos.
 <a id="item-7"></a>
 
 ## - Referências Fracas (classe WeakReference)
+[Topo &uarr;](#topo)
+
 Permite ao programador manter uma referência a um objeto que não impede que o 
 objeto seja destruído. Elas são úteis para implementar estruturas como cache.
 
@@ -152,6 +167,8 @@ var_dump($weakref->get()); // imprime "NULL"
 <a id="item-8"></a>
 
 ## - Permite lançar exceções de __toString()
+[Topo &uarr;](#topo)
+
 Lançar exceções de dentro de "__toString()" agora é permitido. Antes isso 
 resultava um erro fatal. Os erros fatais recuperáveis ​​existentes nas conversões 
 de string foram convertidos em exceções de "Error". 
@@ -160,6 +177,8 @@ de string foram convertidos em exceções de "Error".
 <a id="item-9"></a>
 
 ## - Filter
+[Topo &uarr;](#topo)
+
 O filtro "FILTER_VALIDATE_FLOAT" agora suporta as opções "min_range" e "max_range" 
 com a mesma semântica que "FILTER_VALIDATE_INT". 
 
@@ -167,6 +186,8 @@ com a mesma semântica que "FILTER_VALIDATE_INT".
 <a id="item-10"></a>
 
 ## - Hash
+[Topo &uarr;](#topo)
+
 Adicionado o hash "crc32c" usando o polinômio de Castagnoli. Essa variante CRC32 
 é usada por sistemas de armazenamento, como iSCSI, SCTP, Btrfs e ext4.
 
@@ -174,6 +195,8 @@ Adicionado o hash "crc32c" usando o polinômio de Castagnoli. Essa variante CRC3
 <a id="item-11"></a>
 
 ## - Multibyte String (função "mb_str_split()")
+[Topo &uarr;](#topo)
+
 Adicionada a função "mb_str_split()", que fornece a mesma funcionalidade que 
 "str_split()", mas operando em pontos de código em vez de bytes. 
 
@@ -182,6 +205,8 @@ Adicionada a função "mb_str_split()", que fornece a mesma funcionalidade que
 <a id="item-12"></a>
 
 ## - OPcache (pré-carregamento)
+[Topo &uarr;](#topo)
+
 A partir do PHP 7.4.0, o PHP pode ser configurado para pré-carregar scripts no 
 "opcache" quando o mecanismo é iniciado. Quaisquer funções, classes, interfaces 
 ou traits (mas não constantes) nestes arquivos ficarão globalmente disponíveis 
@@ -197,6 +222,7 @@ apenas para uso em produção, não em um ambiente de desenvolvimento.
 <a id="item-13"></a>
 
 ## - PDO
+[Topo &uarr;](#topo)
 
 ### Usuário e Senha
 O nome de usuário e a senha agora podem ser especificados como parte do "PDO DSN" 
@@ -214,6 +240,8 @@ dados e, por exemplo, usar o operador PostgreSQL JSON key exists (?).
 <a id="item-14"></a>
 
 ## - "strip_tags()" com Array de Nomes de Tags
+[Topo &uarr;](#topo)
+
 "strip_tags()" agora também aceita um array de tags permitidas: em vez de 
 "strip_tags($str, '\<a>\<p>')" agora você pode escrever "strip_tags($str, ['a', 'p'])". 
 
@@ -221,6 +249,8 @@ dados e, por exemplo, usar o operador PostgreSQL JSON key exists (?).
 <a id="item-15"></a>
 
 ## - Serialização de Objetos Personalizados
+[Topo &uarr;](#topo)
+
 Um novo mecanismo para serialização de objetos personalizados foi adicionado, 
 que usa dois novos métodos mágicos: "__serialize()" e "__unserialize()". 
 
@@ -241,6 +271,8 @@ public function __unserialize(array $data): void;
 <a id="item-16"></a>
 
 ## - Funções de Mesclagem de Array sem Argumentos
+[Topo &uarr;](#topo)
+
 "array_merge()" e "array_merge_recursive()" agora podem ser chamados sem nenhum 
 argumento; nesse caso, eles retornarão um array vazio. Isso é útil em conjunto 
 com o operador de espalhamento (spread operator), por exemplo, "array_merge(...$arrays)".
@@ -249,6 +281,8 @@ com o operador de espalhamento (spread operator), por exemplo, "array_merge(...$
 <a id="item-17"></a>
 
 ## - Função "proc_open()"
+[Topo &uarr;](#topo)
+
 "proc_open()" agora aceita um array em vez de uma string para o comando. Nesse 
 caso, o processo será aberto diretamente (sem passar por um shell) e o PHP 
 cuidará de qualquer argumento necessário para escapar. 

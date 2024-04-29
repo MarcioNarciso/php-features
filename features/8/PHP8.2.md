@@ -1,4 +1,5 @@
 # Principais Recursos do PHP 8.2
+<a id="topo"></a>
 
 [&larr; Voltar](index.md)
 
@@ -15,6 +16,8 @@
 <a id="item-1"></a>
 
 ## - Classes Somente Leitura
+[Topo &uarr;](#topo)
+
 Uma classe pode ser marcada com o modificador 'readonly'. Marcar uma classe como 
 'readonly' irá acrescentar o modificador 'readonly' em cada propriedade declarada, 
 e prevenir a criação de propriedades dinâmicas. Além disso, será impossível de 
@@ -46,6 +49,8 @@ readonly class BlogData
 <a id="item-2"></a>
 
 ## - Tipos DNF (Disjunctive Normal Form)
+[Topo &uarr;](#topo)
+
 Tipos DNF nos permite união e interseção de tipos, seguindo uma regra estrita: 
 ao combinar tipos de união e interseção, os tipos de interseção devem ser 
 agrupados com parênteses.
@@ -64,6 +69,8 @@ class Foo {
 <a id="item-3"></a>
 
 ## - 'null', 'false' e 'true' são Tipos Autônomos
+[Topo &uarr;](#topo)
+
 
 ### Exemplo
 ```php
@@ -82,6 +89,8 @@ class Falsy
 <a id="item-4"></a>
 
 ## - Nova Extensão 'Random'
+[Topo &uarr;](#topo)
+
 A extensão "Random" fornece uma nova API orientada a objetos para geração de 
 números aleatórios. Em vez de depender de um gerador de números aleatórios 
 globalmente semeado (RNG) usando o algoritmo Mersenne Twister, a API orientada 
@@ -97,6 +106,8 @@ um array ou string, selecionar chaves de array aleatórias e muito mais.
 <a id="item-5"></a>
 
 ## - Constantes em Traits
+[Topo &uarr;](#topo)
+
 Você não pode acessar a constante através do nome da Trait, mas você pode acessar 
 a constante através da classe que usa a Trait.
 
@@ -122,6 +133,8 @@ var_dump(Foo::CONSTANT); // Error
 <a id="item-6"></a>
 
 ## - Propriedades Dinâmicas Obsoletas
+[Topo &uarr;](#topo)
+
 A criação de propriedades dinâmicas está obsoleta para ajudar a evitar enganos e 
 erros de digitação, a menos que a classe opte por usar o atributo ("notação") de 
 #[\AllowDynamicProperties]. 'stdClass' permite propriedades dinâmicas.
@@ -147,6 +160,8 @@ $user->last_name = 'Doe'; // Still allowed
 <a id="item-7"></a>
 
 ## - Propriedades de Enumerações em Expressões Constantes
+[Topo &uarr;](#topo)
+
 Agora é possível buscar propriedades de Enumerações em expressões constantes.
 
 Como os casos são representados como constantes no próprio 'enum', eles podem ser 

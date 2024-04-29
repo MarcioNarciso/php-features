@@ -1,4 +1,5 @@
 # Principais Recursos do PHP 7.1
+<a id="topo"></a>
 
 [&larr; Voltar](index.md)
 
@@ -19,6 +20,8 @@
 <a id="item-1"></a>
 
 ## - Tipos Anuláveis (Nullable Types)
+[Topo &uarr;](#topo)
+
 As declarações de tipos para parâmetros e retorno agora podem ser marcadas como 
 anuláveis (nullable) prefixando o nome do tipo com um ponto de interrogação (?).
 
@@ -54,6 +57,8 @@ test();
 <a id="item-2"></a>
 
 ## - Funções "void"
+[Topo &uarr;](#topo)
+
 Um tipo de retorno vazio (void) foi introduzido. Funções declaradas com void 
 como seu tipo de retorno precisa tanto omitir sua declaração de retorno (return) 
 completamente ou usar um retorno vazio. Null não é um valor de retorno válido 
@@ -82,6 +87,8 @@ var_dump(swap($a, $b), $a, $b);
 <a id="item-3"></a>
 
 ## - Desestruturação Simétrica de Array
+[Topo &uarr;](#topo)
+
 A sintaxe reduzida de um array ("[]") agora pode ser usada para desestruturar 
 arrays para atribuições (incluindo dentro do foreach), como uma alternativa à 
 sintaxe existente "list()", que ainda é suportada.
@@ -115,6 +122,8 @@ foreach ($data as [$id, $name]) {
 <a id="item-4"></a>
 
 ## - Visibilidade de Constante de Classe
+[Topo &uarr;](#topo)
+
 Foi adicionado suporte para especificação de visibilidade de constantes de classe. 
 
 ### Exemplo
@@ -133,6 +142,8 @@ class ConstDemo
 <a id="item-5"></a>
 
 ## - Pseudo-tipo "iterable"
+[Topo &uarr;](#topo)
+
 Um novo pseudo-tipo (similar ao "callable") chamado "iterable" foi introduzido. 
 Pode ser utilizado em tipos de parâmetros e retorno, em que aceita tanto arrays 
 ou objetos que implementam a interface "Traversable".
@@ -152,6 +163,8 @@ function iterator(iterable $iter)
 <a id="item-6"></a>
 
 ## - Manipulação de Exceção de Captura Múltipla
+[Topo &uarr;](#topo)
+
 Múltiplas exceções por bloco catch agora podem ser especificadas usando o 
 caractere pipe (|). Isso é útil quando diferentes exceções de diferentes 
 hierarquias de classe são manipuladas da mesma forma.
@@ -170,6 +183,8 @@ try {
 <a id="item-7"></a>
 
 ## - Suporte para Chaves em "list()"
+[Topo &uarr;](#topo)
+
 Agora é possível especificar chaves em "list()", ou em sua nova sintaxe 
 abreviada ("[]"). Isso permite a desestruturação de arrays com chaves 
 não-inteiras ou não-sequenciais. 
@@ -203,6 +218,8 @@ foreach ($data as ["id" => $id, "name" => $name]) {
 <a id="item-8"></a>
 
 ## - Suporte a Deslocamento Negativo em string
+[Topo &uarr;](#topo)
+
 Suporte para deslocamento negativo em strings foi adicionado às funções de 
 manipulação de string que aceitam deslocamento (offset), assim como para indexação 
 de string com [] ou {}. Nesse casos, um deslocamento negativo é interpretado 
@@ -225,6 +242,8 @@ echo "O último caractere de '$string' é '$string[-1]'.\n";
 <a id="item-9"></a>
 
 ## - Conversão de callables para Closures com Closure::fromCallable()
+[Topo &uarr;](#topo)
+
 Um novo método estático foi introduzido à classe Closure para permitir que 
 objetos do tipo callable sejam facilmente convertidos em objetos da classe Closure. 
 
@@ -253,6 +272,8 @@ $privFunc('algum valor'); // imprime 'string(11) "algum valor"'
 <a id="item-10"></a>
 
 ## - Manipulação Assíncrona de sinal
+[Topo &uarr;](#topo)
+
 Uma nova função chamada “pcntl_async_signals()” foi adicionada para permitir a 
 manipulação assíncrona de sinal sem usar ticks (que aumenta muito o overhead).
 
@@ -275,6 +296,8 @@ posix_kill(posix_getpid(), SIGHUP);
 <a id="item-11"></a>
 
 ## - Operadores de números e números malformados
+[Topo &uarr;](#topo)
+
 Agora o PHP emite um "notice" ou "warning" para alertar operações matemáticas erradas.
 
 ### Exemplo

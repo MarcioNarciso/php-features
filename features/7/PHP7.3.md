@@ -1,4 +1,5 @@
 # Principais Recursos do PHP 7.3
+<a id="topo"></a>
 
 [&larr; Voltar](index.md)
 
@@ -16,6 +17,8 @@
 <a id="item-1"></a>
 
 ## - Sintaxe Mais Flexível de Heredoc e Nowdoc
+[Topo &uarr;](#topo)
+
 O marcador de fechamento para documentação não tem mais a necessidade de ser 
 seguido por um ponto e vírgula ou uma nova linha. Além disso, o marcador de 
 fechamento pode ser indentado, no caso, a indentação será removida de todas as 
@@ -25,6 +28,8 @@ linhas da documentação.
 <a id="item-2"></a>
 
 ## - A Desestruturação de Array tem Suporte para Atribuições por Referência
+[Topo &uarr;](#topo)
+
 A desestruturação de matriz agora suporta atribuições de referência usando a 
 sintaxe [&$a, [$b, &$c]] = $d O mesmo também é suportado para "list()"".
 
@@ -39,6 +44,8 @@ $a .= '-pio'; // $values[0] == ‘one-pio’
 <a id="item-3"></a>
 
 ## - Operador "instanceof" Aceita Tipos Literais
+[Topo &uarr;](#topo)
+
 "instanceof" agora permite literais como o primeiro operando, caso em que o 
 resultado é sempre false. 
 
@@ -46,6 +53,8 @@ resultado é sempre false.
 <a id="item-4"></a>
 
 ## - Exceção "CompileError" em vez de Alguns Erros de Compilação
+[Topo &uarr;](#topo)
+
 Uma nova exceção "CompileError" foi adicionada, da qual "ParseError" herda. 
 Um pequeno número de erros de compilação agora lançará um "CompileError" em vez de 
 gerar um fatal error. Atualmente, isso afeta apenas erros de compilação que podem 
@@ -56,12 +65,16 @@ convertidos no futuro.
 <a id="item-5"></a>
 
 ## - Vírgulas à Direita são Permitidas em Chamadas
+[Topo &uarr;](#topo)
+
 Agora são permitidas vírgulas à direita em chamadas de função e método.
 
 
 <a id="item-6"></a>
 
 ## - FastCGI Process Manager
+[Topo &uarr;](#topo)
+
 Novas opções foram adicionadas para personalizar o log do FPM: 
 
  - log_limit
@@ -83,6 +96,8 @@ workers quando "catch_workers_output" estiver ativado.
 <a id="item-7"></a>
 
 ## - Suporte para Argon2id
+[Topo &uarr;](#topo)
+
 O argumento de configuração "--with-password-argon2[=dir]" agora fornece suporte 
 para os hashes Argon2i e Argon2id nas funções "password_hash()", 
 "password_verify()", "password_get_info()" e "password_needs_rehash()". 
@@ -91,9 +106,11 @@ O suporte para Argon2i e Argon2id nas funções "password_*()"" agora requer que
 o PHP seja vinculado à biblioteca de referência libargon2 ≥ 20161029. 
 
 
-<a id="item-7"></a>
+<a id="item-8"></a>
 
 ## - Adicionada a Função "is_countable()"
+[Topo &uarr;](#topo)
+
 Ela verifica se o conteúdo de uma variável é um valor contável.
 
 ### Exemplo

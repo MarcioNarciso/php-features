@@ -1,4 +1,5 @@
 # Principais Recursos do PHP 8
+<a id="topo"></a>
 
 [&larr; Voltar](index.md)
 
@@ -29,6 +30,8 @@
 <a id="item-1"></a>
 
 ## - Compilação Just-In-Time (JIT)
+[Topo &uarr;](#topo)
+
 PHP 8 apresenta dois motores de compilação JIT: Tracing JIT e Function JIT. 
 Tracing JIT, o mais promissor dos dois, mostra desempenho cerca de 3 vezes 
 melhor em benchmarks sintéticos e melhoria de 1,5 a 2 vezes em alguns aplicativos 
@@ -39,6 +42,8 @@ O desempenho típico das aplicações está no mesmo nível do PHP 7.4.
 <a id="item-2"></a>
 
 ## - Argumentos Nomeados
+[Topo &uarr;](#topo)
+
 Especifique apenas os parâmetros obrigatórios, pulando os 
 opcionais. Os argumentos são independentes da ordem e 
 autodocumentados.
@@ -52,6 +57,8 @@ htmlspecialchars($string, double_encode: false);
 <a id="item-3"></a>
 
 ## - Atributos
+[Topo &uarr;](#topo)
+
 Em vez de anotações PHPDoc, agora pode-se usar metadados 
 estruturados com a sintaxe nativa do PHP.
 
@@ -68,6 +75,8 @@ class PostsController
 <a id="item-4"></a>
 
 ## - Promoção de Propriedade de Construtor
+[Topo &uarr;](#topo)
+
 Menos código boilerplate para definir e inicializar propriedades.
 Os parâmetros do __construct() quando especificado a visibilidade, são promovidos 
 a propriedade da classe.
@@ -87,6 +96,8 @@ class Point {
 <a id="item-5"></a>
 
 ## - União de Tipos
+[Topo &uarr;](#topo)
+
 Em vez de anotações PHPDoc para uma combinação de tipos, você pode usar declarações 
 de união de tipos nativa que são validados em tempo de execução.
 
@@ -105,6 +116,8 @@ new Number('NaN'); // TypeErrors
 <a id="item-6"></a>
 
 ## - Expressão "match"
+[Topo &uarr;](#topo)
+
 A nova expressão match é semelhante ao switch e tem os seguintes recursos:
 
 - Match é uma expressão, o que significa que seu resultado pode ser armazenado 
@@ -126,6 +139,8 @@ echo match (8.0) {
 <a id="item-7"></a>
 
 ## - Operador 'nullsafe' (?->)
+[Topo &uarr;](#topo)
+
 Em vez de verificar condições nulas, agora você pode usar uma cadeia de chamadas 
 com o novo operador nullsafe. Quando a avaliação de um elemento da cadeia falha, 
 a execução de toda a cadeia é abortada e toda a cadeia é avaliada como nula.
@@ -139,6 +154,8 @@ $country = $session?->user?->getAddress()?->country;
 <a id="item-8"></a>
 
 ## - Comparações mais Inteligentes entre Strings e Números RFC
+[Topo &uarr;](#topo)
+
 Ao comparar com uma string numérica, o PHP 8 usa uma comparação numérica. Caso 
 contrário, ele converte o número em uma string e usa uma comparação de string.
 
@@ -152,6 +169,8 @@ contrário, ele converte o número em uma string e usa uma comparação de strin
 <a id="item-9"></a>
 
 ## - Erros Consistentes para Tipos de Dados em Funções Internas RFC
+[Topo &uarr;](#topo)
+
 A maioria das funções internas agora lançam uma exceção Error se a validação do 
 parâmetro falhar, não lança mais warnings e notices.
 
@@ -166,6 +185,8 @@ array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be
 <a id="item-10"></a>
 
 ## - Argumento Variádico
+[Topo &uarr;](#topo)
+
 Qualquer número de parâmetros de função agora pode ser substituído por um 
 argumento variádico, desde que os tipos sejam compatíveis. 
 
@@ -186,6 +207,8 @@ class B extends A {
 <a id="item-11"></a>
 
 ## - Tipo de Retorno 'static'
+[Topo &uarr;](#topo)
+
 'static' (como em "vinculação estática tardia") agora pode ser usado como um 
 tipo de retorno.
 
@@ -203,6 +226,8 @@ class Test {
 <a id="item-12"></a>
 
 ## - Nome Totalmente Qualificado da Classe via Objeto
+[Topo &uarr;](#topo)
+
 Agora é possível buscar o nome da classe de um objeto usando "$object::class". 
 O resultado é o mesmo que get_class($object). 
 
@@ -210,6 +235,8 @@ O resultado é o mesmo que get_class($object).
 <a id="item-13"></a>
 
 ## - 'new' e 'instanceof' com Expressões Arbitrárias
+[Topo &uarr;](#topo)
+
 'new' e 'instanceof' agora podem ser usados com expressões arbitrárias 
 (se a expressão produzir uma string [as expressões devem estar em parênteses]), 
 usando "new (expressão)(...$argsConstrutor)" e "$obj instanceof (expressão)". 
@@ -236,6 +263,8 @@ var_dump(new (ClasseD::class)); // imprime "object(ClasseD)#1 (0) {}"
 <a id="item-14"></a>
 
 ## - Interface Stringable
+[Topo &uarr;](#topo)
+
 Adicionada interface Stringable, que é implementada automaticamente se uma 
 classe definir um método "__toString()". 
 
@@ -243,6 +272,8 @@ classe definir um método "__toString()".
 <a id="item-15"></a>
 
 ## - Traits e Métodos Privados Abstratos
+[Topo &uarr;](#topo)
+
 As Traits agora podem definir métodos privados abstratos. Tais métodos devem ser 
 implementados pela classe que usa o "trait". 
 
@@ -250,6 +281,8 @@ implementados pela classe que usa o "trait".
 <a id="item-16"></a>
 
 ## - "throw" como Expressão
+[Topo &uarr;](#topo)
+
 'throw' agora pode ser usado como uma expressão. Isso permite usos como: 
 
 ### Exemplo
@@ -263,6 +296,8 @@ $user = $session->user ?? throw new Exception('Must have user');
 <a id="item-17"></a>
 
 ## - "catch (Exception)"
+[Topo &uarr;](#topo)
+
 Agora é possível escrever "catch (Exception)" para capturar uma exceção sem 
 armazená-la em uma variável. 
 
@@ -270,12 +305,16 @@ armazená-la em uma variável.
 <a id="item-18"></a>
 
 ## - O Tipo 'mixed'
+[Topo &uarr;](#topo)
+
 O suporte para tipo mixed foi adicionado.
 
 
 <a id="item-19"></a>
 
 ## - Métodos Privados da Classe Pai
+[Topo &uarr;](#topo)
+
 Os métodos privados declarados em uma classe pai não impõem mais nenhuma regra 
 de herança nos métodos de uma classe filha (com exceção dos construtores 
 privados finais)
@@ -284,5 +323,7 @@ privados finais)
 <a id="item-20"></a>
 
 ## - A Classe InternalIterator
+[Topo &uarr;](#topo)
+
 Foi adicionada a classe para facilitar a implementação de IteratorAggregate para 
 classes internas. 

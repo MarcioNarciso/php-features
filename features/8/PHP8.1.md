@@ -1,4 +1,5 @@
 # Principais Recursos do PHP 8.1
+<a id="topo"></a>
 
 [&larr; Voltar](index.md)
 
@@ -21,6 +22,8 @@
 <a id="item-1"></a>
 
 ## - Enumerações
+[Topo &uarr;](#topo)
+
 Use 'enum' em vez de um conjunto de constantes e obtenha validação de forma 
 transparente.
 
@@ -40,6 +43,8 @@ function acceptStatus(Status $status) {...}
 <a id="item-2"></a>
 
 ## - Propriedades Somente Leitura
+[Topo &uarr;](#topo)
+
 Propriedades somente leitura não podem ser alteradas após a inicialização, ou 
 seja, após um valor ser atribuido a elas.
 Elas são uma ótima maneira de modelar objetos de valor (Value Objects) e objetos 
@@ -64,6 +69,8 @@ class BlogData
 <a id="item-3"></a>
 
 ## - Sintaxe de Callables de Primeira Classe
+[Topo &uarr;](#topo)
+
 Agora é possível obter a referência de qualquer função. Isso é chamado de sintaxe
 de callable de primeira classe.
 
@@ -80,6 +87,8 @@ $fn = strlen(...);
 <a id="item-4"></a>
 
 ## - 'new' em Inicializadores
+[Topo &uarr;](#topo)
+
 Objetos agora podem ser usados como valor padrão de parâmetros, variáveis 
 estáticas, e constantes globais, bem como em argumentos de atributos.
 
@@ -115,6 +124,8 @@ class User
 <a id="item-5"></a>
 
 ## - Tipos de Interseção Puros
+[Topo &uarr;](#topo)
+
 Use tipos de interseção quando um valor precisa satisfazer múltiplas restrições 
 de tipo ao mesmo tempo.
 
@@ -135,6 +146,8 @@ function count_and_iterate(Iterator&Countable $value) {
 <a id="item-6"></a>
 
 ## - Tipo de Retorno 'never'
+[Topo &uarr;](#topo)
+
 Uma função ou método declarada com o tipo 'never' indica que ela não irá retornar 
 um valor e irá lançar uma exceção ou terminar a execução do script com uma 
 chamada de 'die()', 'exit()', 'trigger_error()', ou algo similar.
@@ -156,6 +169,8 @@ function redirectToLoginPage(): never {
 <a id="item-7"></a>
 
 ## - Constantes de Classe Finais
+[Topo &uarr;](#topo)
+
 É possível declarar constantes de classe como 'final', de forma que elas não 
 possam ser sobrescritas em classes filhas.
 
@@ -176,6 +191,8 @@ class Bar extends Foo
 <a id="item-8"></a>
 
 ## - Notação Explícita de Numeral Octal
+[Topo &uarr;](#topo)
+
 Agora é possível escrever números octais com o prefixo explícito '0o'.
 
 ### Exemplo
@@ -188,6 +205,8 @@ Agora é possível escrever números octais com o prefixo explícito '0o'.
 <a id="item-9"></a>
 
 ## - Fibers
+[Topo &uarr;](#topo)
+
 Fibers são primitivos para implementar concorrência cooperativa leve. Elas são 
 meios de criar blocos de código que podem ser pausados e retomados como Geradores, 
 mas de qualquer lugar da pilha de execução. Fibers em si não fornecem concorrência 
@@ -217,6 +236,8 @@ $fiber->resume('test');
 <a id="item-10"></a>
 
 ## - Desempacotamento de Array para Arrays com Chaves String
+[Topo &uarr;](#topo)
+
 PHP já suportava o desempacotamento dentro de arrays através do operador de 
 espalhamento (spread operator), mas somente se o array tivesse chaves de inteiro. 
 Agora também é possível desempacotar arrays com chaves string.
@@ -235,6 +256,8 @@ $result = ['a' => 0, ...$arrayA, ...$arrayB];
 <a id="item-11"></a>
 
 ## - Argumentos Nomeados Após Desempacotamento de Argumentos
+[Topo &uarr;](#topo)
+
 Agora é possível especificar argumentos nomeados após um desempacotamento de 
 argumentos.
 
@@ -247,6 +270,8 @@ foo(...$args, nomeado: $arg)
 <a id="item-13"></a>
 
 ## - 'SplFileObject'
+[Topo &uarr;](#topo)
+
 'SplFileObject::fputcsv()' agora aceita um novo argumento, 'eol', que permite a 
 definição de uma sequência de fim de linha personalizada, o padrão continua o 
 mesmo e é "\n". 
